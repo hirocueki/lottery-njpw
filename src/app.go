@@ -1,19 +1,10 @@
 package main
 
-import (
-	"net/http"
-
-	"github.com/gorilla/mux"
-)
+import "net/http"
 
 func init() {
-	r := mux.NewRouter().StrictSlash(true)
-
-	r.HandleFunc("/", handler)
-	r.HandleFunc("/api/v1/lottery", Lottery)
-
-	http.Handle("/", r)
-
+	http.HandleFunc("/", handler)
+	http.HandleFunc("/api/v1/lottery", Lottery)
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
