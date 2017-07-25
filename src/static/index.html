@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>NJPWくじ</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- TweenLite.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="app">
+        <svg width="200" height="200" @click="open">
+            <polygon :points="points"></polygon>
+            <circle cx="100" cy="100" r="90"></circle>
+        </svg>
+    </div>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
